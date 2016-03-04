@@ -48,11 +48,11 @@ int main(int argc, char* argv[])
         char * buf = read_file(fin_name, &len);
         char fout_name[100];
 		if (tflag) {
-			transform(buf, len);
+			mtf_transform(buf, len);
             sprintf(fout_name, "%s.mtf", fin_name);
 		} else {
-			reverse(buf, len);
-            sprintf(fout_name, "%s.rev", fin_name);
+			mtf_reverse(buf, len);
+            sprintf(fout_name, "%s.txt", fin_name);
 		}
 
         FILE * fout = open_file(fout_name, "w");
