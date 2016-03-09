@@ -55,7 +55,7 @@ int main(int argc, char* argv[])
             sprintf(fout_name, "%s.txt", fin_name);
 		}
 
-        FILE * fout = open_file(fout_name, "w");
+        FILE * fout = open_file(fout_name, "wb");
         fwrite(buf, sizeof(char), len, fout);
         fclose(fout);
         free(buf);
